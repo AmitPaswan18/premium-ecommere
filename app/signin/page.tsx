@@ -65,8 +65,13 @@ export default function SignIn() {
         return;
       }
 
-      // The useEffect will handle the redirect once the session is updated
-      // No need to manually redirect here
+      // Add this manual redirect after successful authentication
+      if (result?.ok) {
+        // Short timeout to allow the session to be established
+        setTimeout(() => {
+          window.location.href = callbackUrl;
+        }, 100);
+      }
     } catch (error) {
       console.error("Sign in error:", error);
       setError("Something went wrong. Please try again.");
