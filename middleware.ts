@@ -18,7 +18,7 @@ export async function middleware(req: NextRequest) {
     // Get the session token
     const token = await getToken({
         req,
-        secret: process.env.NEXTAUTH_SECRET, // Using the provided secret
+        secret: "c8130054f85f36d9b2f7fbed8f0d43d9b9b47b9f9e9c6d8a7f6e5d4c3b2a1b0a", // Use the same hardcoded secret as in your auth config
     })
 
     // If there's no token and the route is not public, redirect to signin

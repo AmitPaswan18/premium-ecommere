@@ -54,7 +54,7 @@ export const authOptions: NextAuthOptions = {
         },
     },
     debug: true, // Enable debug mode for development
-    secret: "QerWODGJwcJF/Hf1z01PrcIyKGrhDX5IXawaFjWHyu8=", // Using the provided secret
+    secret: "c8130054f85f36d9b2f7fbed8f0d43d9b9b47b9f9e9c6d8a7f6e5d4c3b2a1b0a", // Using the provided secret
 }
 
 const handler = NextAuth(authOptions)
